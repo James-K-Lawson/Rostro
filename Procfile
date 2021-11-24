@@ -1,1 +1,1 @@
-web: gunicorn; flask translate compile; flask RostroWeb:app
+web: flask; flask translate compile; flask rostro:app
