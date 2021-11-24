@@ -1,1 +1,1 @@
-web: gunicorn app:RostroWeb -b \"0.0.0.0:\$PORT\" -w 3
+web: flask db upgrade; flask translate compile; gunicorn rostro:app
