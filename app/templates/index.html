@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+{% block form %}
+<h1>Welcome to Rostro!</h1>
+<div class = w3-content>
+    <p class = 'text-align'><b>Tired of opening and reopening your excel roster to check when your next shift is? <br>Worry no more! Rostro has you covered.</b></p>
+        <p>Rostro is a service which easily converts your Excel roster into a .ics file. 
+        ICS is a universal calendar format used by essentially all of your home devices. It imports easily into iCalendar, Google Calendar, and Microsoft Outlook among others. 
+        Feel the ease of simply opening your phone and viewing your upcoming shifts on your phone's calendar widget! 
+        <br><br>Simply upload your roster, enter your name, and we'll process your .ics file in seconds.</p>
+<div class = vertical-center>
+<button id=to_form class = 'w3-button w3-black'>Create your Calendar!</button>
+</div></div>
+<script>
+    document.getElementById('to_form').addEventListener
+    ('click', runRostro);
+    function runRostro(){
+        window.location.href = '/form'
+    }
+</script>
+{% endblock %}
+{% endblock %}

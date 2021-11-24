@@ -1,0 +1,2 @@
+FLASK_APP=RostroWeb.py
+FLASK_ENV=development

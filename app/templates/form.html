@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+{% block form %}
+<h1>Welcome to Rostro!</h1>
+<p></p>
+<div class="w3-content" style="max-width:1400px">
+<div class = center>
+<form id = Rostro action = '' method = 'post' novalidate enctype="multipart/form-data" class = 'w3-form-control'>
+    {{form.hidden_tag()}}
+    <p>For now, please enter your username exactly as it appears on your roster</p>
+    <p class >
+        {{form.username.label}}<br>
+        {{form.username}}
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p class = p>
+        {{ form.rostertype.label }}<br>
+        {{ form.rostertype(size=32) }}
+        {% for error in form.rostertype.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p class = p>
+        {{ form.roster.label }}<br>
+        {{ form.roster(size=32) }}
+        {% for error in form.roster.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{form.submit()}}</p>
+    <!-- <label for = 'username'>Enter name (as it appears on the roster):</label><br>
+    <input type = "text" id = 'username' name = 'username'>
+    <br><br>
+    <label for = 'ED'>ED</label>
+    <input type = "radio" id = 'ED' name = 'Roster Type'>
+    <label for = 'MAPU'>MAPU</label>
+    <input type = "radio" id = 'MAPU' name = 'Roster Type'>
+    <br><br>
+    <label for = 'Roster'>Upload Roster</label>
+    <input type = 'file' id = 'upload' name = 'upload'>
+    <br><br><br>
+    <label for = 'Submit'>Run Rostro</label>
+    <input type = 'submit' id = 'SubmitButton'> -->
+</form></div></div>
+<!-- <script>
+
+    document.getElementById('Runbutton').addEventListener
+    ('click', runRostro);
+
+    function runRostro(){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'main.py', true);
+        xhr.onload = function(){
+            if(this.status == 200){
+                console.log(this.responseText);
+            }
+        }
+
+        xhr.send();
+    }
+
+</script> -->
+{% endblock %}
+{% endblock %}

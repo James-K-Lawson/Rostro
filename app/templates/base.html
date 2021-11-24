@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    {% block head %}{% endblock %}
+    {% if title %}
+    <title>{{ title }} - RostroWeb</title>
+    {% else %}
+    <title>Welcome to RostroWeb!</title>
+    {% endif %}
+    <style>body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}</style>
+</head>
+<body class = 'w3-light-grey'>
+    {% block body %}
+    {% block form %}
+    {% endblock %}
+    {% endblock %}
+</body>
+</html>
