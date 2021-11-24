@@ -26,14 +26,15 @@ def form():
             print('file not uploading')
             return redirect(request.url)
         file = request.files['roster']
-        # If the user does not select a file, the browser submits an
-        # empty file without a filename.
+        # If the user  not select a file, the browser submits an
+        # empty file hout a filename.
         if file.filename == '':
             flash('No selected file')
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            save_path = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'])
+            # save_path = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'])
+            save_path = app.config['UPLOAD_FOLDER']
             file.save(os.path.join(save_path, filename))
         return redirect('/success', code= 307)
     return render_template('form.html', title = 'Home', form = form)
@@ -45,7 +46,7 @@ def success():
     print(type(form_data.get('roster')))
     username = form_data.get('username')
     rostertype = form_data.get('rostertype')
-    roster_path = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'],file_data.filename)
+    roster_path = os.path.join(app.config['UPLOAD_FOLDER'],file_data.filename)
     ros = Rostro.sort_roster(username, rostertype, roster_path)
     calpath = ros.create_ical()
     return render_template('success.html', username=username, filename = calpath, shiftcount = ros.shiftcount)
