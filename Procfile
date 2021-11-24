@@ -1,1 +1,1 @@
-web: flask; flask translate compile; flask rostro:app
+web: gunicorn app:RostroWeb -b \"0.0.0.0:\$PORT\" -w 3
