@@ -211,4 +211,3 @@ class EDRoster(Roster):
 
 if __name__ == '__main__':
     ed = EDRoster('Term_5_2021_Intern.xlsx','LAWSON, James')
-    ed.run_rostro()

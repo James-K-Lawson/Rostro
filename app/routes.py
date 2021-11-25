@@ -54,11 +54,14 @@ def success():
 @app.route('/success/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
     basename = os.path.basename(filename)
-    return_data = io.BytesIO()
-    with open(filename, 'rb') as fo:
-        return_data.write(fo.read())
-        # (after writing, cursor will be at last byte, so move it to start)
-        return_data.seek(0)
-    os.remove(filename)
-    return send_file(return_data, mimetype='application/ics', attachment_filename=basename)
-    # return send_from_directory(directory=uploads, path = os.path.basename(filename))
+    # return_data = io.BytesIO()
+    # with open(filename, 'rb') as fo:
+    #     return_data.write(fo.read())
+    #     # (after writing, cursor will be at last byte, so move it to start)
+    #     return_data.seek(0)
+    # os.remove(filename)
+    # return send_file(return_data, mimetype='application/ics', attachment_filename=basename)
+
+    uploads = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'])
+
+    return send_from_directory(directory=uploads, path = os.path.basename(filename))
