@@ -7,6 +7,7 @@ from openpyxl.reader.excel import load_workbook
 from openpyxl.styles import Fill
 from RostroBackend.Roster import *
 import os
+import re
 
 
 def military_string_to_datetimetime(time: str) -> datetime.time:
@@ -52,10 +53,11 @@ class EDRoster(Roster):
                 print(cell.value)
 
     def get_indexes(self) -> list[int]:
-
+        usernames = re.split('[^a-zA-Z]', self.username)
+        usernames = list(filter(None, usernames))
         for rows in self.df.iter_rows():
             for cell in rows:
-                if cell.value == self.username:
+                if isinstance(cell.value,str) and all(re.search(username, cell.value, flags=re.IGNORECASE) for username in usernames):
                     index = (cell.col_idx, cell.row)
                     print(index, self.username)
                     return index
@@ -170,7 +172,11 @@ class EDRoster(Roster):
     def create_ical(self) -> None:
         cal = Calendar()
         caldir = os.path.dirname(self.rosterpath)
-        calname = f'{self.username} Rostro.ics'
+        # username = self.username.replace(' ','_')
+        usernames = re.split('[^a-zA-Z]', self.username)
+        usernames = list(filter(None, usernames))
+        username = '-'.join(usernames)
+        calname = f'{username}-Rostro.ics'
         calpath = os.path.join(caldir,calname)
         for shift in self.fullshifts:
             event = Event()
