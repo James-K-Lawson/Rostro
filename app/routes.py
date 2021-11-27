@@ -4,7 +4,6 @@ import os, io
 from app.forms import RosterForm
 from app import app
 import RostroBackend.Rostro as Rostro
-import rails
 
 
 def allowed_file(filename):
