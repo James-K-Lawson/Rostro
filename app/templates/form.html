@@ -2,41 +2,40 @@
 {% block head %}
 {% endblock %}
 {% block body %}
-{% block form %}
 <div class="body-container--primary">
     <div class="body-text--headers">
-        <h1 style="display: flex; flex-direction: row; align-items: center; justify-content: center; padding-right: 50px;"><img src="static/assets/favicon.svg" style="width: 56.58px; margin-right: 15px;">Rostro</h1>
-        <h2>Submit your roster below</h2>
-        <div
-            style="width: calc(40vw + 100px); max-width: 800px; height: 2px; background: rgb(190, 190, 190); margin-top: 18px;">
+        <div class="logo-separator">
+            <img src="static/assets/favicon.svg" class="logo">
+            <h1>Rostro</h1>
         </div>
+        <h2>ICS rostering made <strong>easy.</strong></h2>
+        <div class="header-separator"></div>
     </div>
-    <form id=Rostro action='' method='post' novalidate enctype="multipart/form-data">
-        {{form.hidden_tag()}}
-        <input name="roster" required size="32" type="file" id="roster" onchange='fileSelected()'
-            style="display:none" />
-        <label for="roster"
-            style="margin-bottom: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px; width: 100%; background:#d2e3f0; border: 2px dashed rgb(22, 97, 167); border-radius: 20px;"
-            id="roster-select" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-            <p style="font-size: 16px;" id="file-select-text"><strong style="cursor:pointer;" class="upload-info">Choose
-                    an excel file</strong> or drag it here</p>
-        </label>
-        <p>
-            {{form.username}}
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p style="margin-top: 15px; margin-bottom: 10px;">
-            {{ form.rostertype.label }}<br>
-            {{ form.rostertype }}
-            {% for error in form.rostertype.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <div style="display: flex; align-items: center; justify-content: center; text-align: center;">{{form.submit()}}
-        </div>
-    </form>
+    <div class="body-text--descriptives">
+        <form id=Rostro action='' method='post' novalidate enctype="multipart/form-data">
+            {{form.hidden_tag()}}
+            <input name="roster" required size="32" type="file" id="roster" onchange='fileSelected()' style="display:none" />
+            <label for="roster" style="margin-bottom: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px; width: 100%; background:#d2e3f0; border: 2px dashed rgb(22, 97, 167); border-radius: 20px;" id="roster-select" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+                <p style="font-size: 16px;" id="file-select-text"><strong style="cursor:pointer;" class="upload-info">Choose an excel file</strong> or drag it here</p>
+            </label>
+            <p>
+                {{form.username}}
+                {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p style="margin-top: 15px; margin-bottom: 10px;">
+                {{ form.rostertype.label }}<br>
+                {{ form.rostertype }}
+                {% for error in form.rostertype.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+        </form>
+    </div>
+    <div class="body-buttons--primary">
+        <input class="btn-primary--next" name="submit" type="submit" id="submit" value="SUBMIT" form="Rostro" />
+    </div>
 </div>
 <script>
     function fileSelected() {
@@ -45,10 +44,6 @@
 
     function dropHandler(ev) {
         console.log('File(s) dropped');
-
-        // document.getElementById('roster').style.background = '#000'
-
-        // Prevent default behavior (Prevent file from being opened)
         ev.preventDefault();
 
         if (ev.dataTransfer.items) {
@@ -71,8 +66,6 @@
 
     function dragOverHandler(ev) {
         console.log('File(s) in drop zone');
-        // document.getElementById("roster-select").style.background="#e6edf3"
-        // Prevent default behavior (Prevent file from being opened)
         ev.preventDefault();
     }
 </script>
@@ -80,21 +73,5 @@
     label:nth-child(1) {
         font-weight: bold;
     }
-
-    #rostertype {
-        width: 350px;
-        height: 30px;
-        border-radius: 3px;
-    }
-
-    #submit {
-        margin-top: 20px;
-        width: 350px;
-    }
-
-    option {
-        text-align: center;
-    }
 </style>
-{% endblock %}
 {% endblock %}

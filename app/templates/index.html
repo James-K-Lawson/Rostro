@@ -2,37 +2,47 @@
 {% block head %}
 {% endblock %}
 {% block body %}
-{% block form %}
 <div class="body-container--primary">
     <div class="body-text--headers">
-        <h1 style="display: flex; flex-direction: row; align-items: center; justify-content: center; padding-right: 50px;"><img src="static/assets/favicon.svg" style="width: 56.58px; margin-right: 15px;">Rostro</h1>
-        <h2>ICS rostering made <strong style="color: #3ACF87">easy.</strong></h2>
-        <div style="width: calc(40vw + 100px); max-width: 800px; height: 2px; background: rgb(190, 190, 190); margin-top: 18px;"></div>
+        <div class="logo-separator">
+            <img src="static/assets/favicon.svg" class="logo">
+            <h1>Rostro</h1>
+        </div>
+        <h2>ICS rostering made <strong>easy.</strong></h2>
+        <div class="header-separator"></div>
     </div>
     <div class="body-text--descriptives">
         <h3>What is Rostro?</h3>
         <p>Rostro takes your Excel roster file and converts it into an .ics file.</p>
         <br>
         <h3>What is an .ics file?</h3>
-        <p>An .ics file is a type of calendar file used by essentially all your devices. It's used by iCalendar, Google Calendar, Microsoft Outlook and many others calendar platforms.</p>
+        <p>An .ics file is a type of calendar file used by essentially all your devices. It's used by iCalendar, Google
+            Calendar, Microsoft Outlook and many others calendar platforms.</p>
         <br>
         <h3>So what's the benefit?</h3>
-        <p>You can import an .ics file into your favourite calendar platform and easily be able to check your roster from all your devices whenever, and wherever you want.</p>
+        <p>You can import an .ics file into your favourite calendar platform and easily be able to check your roster
+            from all your devices whenever, and wherever you want.</p>
         <br>
         <h3>How do I use Rostro?</h3>
-        <p>Simply upload your roster, enter your name, and you'll receive an .ics file you can import into your favourite calendar platform in seconds. It's that easy.</p>
+        <p>Simply upload your roster, enter your name, and you'll receive an .ics file you can import into your
+            favourite calendar platform in seconds. It's that easy.</p>
     </div>
-    <a href="/form" class="btn-primary--next" id="to_form">CREATE MY CALENDAR</a>
+    <div class="body-buttons--primary">
+        <a href="/form" class="btn-primary--next" id="to_form">CREATE MY CALENDAR</a>
+    </div>
 </div>
 <div class="body-container--mobile">
     <div class="body-text--headers">
-        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; padding-right: 50px; padding-bottom: 3px;"><img src="static/assets/favicon.svg" style="width: 56.58px; margin-right: 15px;"><h1 style="padding-bottom: 0;">Rostro</h1></div>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; padding-right: 50px; padding-bottom: 3px;">
+            <img src="static/assets/favicon.svg" style="width: 56.58px; margin-right: 15px;">
+            <h1 style="padding-bottom: 0;">Rostro</h1>
+        </div>
         <h2>ICS rostering made <strong style="color: #3ACF87">easy.</strong></h2>
-        <div style="width: calc(40vw + 100px); max-width: 800px; height: 2px; background: rgb(190, 190, 190); margin-top: 18px;"></div>
+        <div style="width: calc(40vw + 100px); max-width: 800px; height: 2px; background: rgb(190, 190, 190); margin-top: 18px;">
+        </div>
     </div>
     <div>
         <span>At this stage Rostro is only viewable on a computer.</span>
     </div>
 </div>
-{% endblock %}
 {% endblock %}
