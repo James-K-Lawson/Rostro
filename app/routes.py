@@ -34,6 +34,7 @@ def form():
             filename = secure_filename(file.filename)
             save_path = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'])
             print('THIS SECTION HAS BEEN ACCESSED (VALIDATE ON SUBMIT)')
+            filename = 'temp' + '.' + filename.split('.')[1]
             file.save(os.path.join(save_path, filename))
             # with open(content,'r') as f:
             #     g=io.StringIO(f.read())
