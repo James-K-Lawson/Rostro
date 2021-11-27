@@ -13,8 +13,8 @@
             style="width: calc(40vw + 100px); max-width: 800px; height: 2px; background: rgb(190, 190, 190); margin-top: 18px;">
         </div>
     </div>
-    <div style="display: flex; flex-direction: row; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 20px;">Great news, <h3 style="text-transform: capitalize; font-size: 20px;margin: 0 0 0 5px;">{{username}}</h3>!</div>
-    <div style="margin-top: 10px;display: flex; flex-direction: row; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">We found and converted <h3 style="font-size: 18px;margin: 0 0 0 5px;">{{shiftcount}} shifts.</h3></div>
+    <span style="margin-top: 10px; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">Great news, <span style="text-transform: capitalize; display: inline; color: #3acf87; font-weight: bold; font-size: 18px;">{{username}}</span>!</span>
+    <span style="margin-top: 10px; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">We found and converted <span style="display: inline; color: #3acf87; font-weight: bold; font-size: 18px;">{{shiftcount}} shifts.</span></span>
     <a href="{{ url_for('download', filename = filename) }}" style="margin-top:30px;" class="btn-primary--next" id="to_form">DOWNLOAD MY CALENDAR</a>
     <a href="/form" class="btn-primary--next-alt" id="to_form">CREATE ANOTHER CALENDAR</a>
 </div>

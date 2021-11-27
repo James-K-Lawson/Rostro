@@ -113,7 +113,7 @@ h3 {
 	font-family: 'Noto Sans';
 	transition: background 0.3s ease;
 	text-decoration: none;
-	min-width: 350px;
+	min-width: 300px;
 }
 
 .btn-primary--next-alt {
