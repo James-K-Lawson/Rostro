@@ -13,7 +13,7 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(to bottom, #4881ff 0%, #1958e3 65.999%, #fcfcfd 66%, #f7f9ff 100%);
+	background: linear-gradient(to bottom, #3ACF87 0%, #2CB572 65.999%, #fcfcfd 66%, #f7f9ff 100%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -37,10 +37,14 @@ p, h1, h2, h3, h4, h5, h6, label {
 	user-select: none;
 }
 
+p {
+	color: #2e2e2e
+}
+
 h1 {
 	font-weight: 700;
 	font-size: 50px;
-	background: -webkit-linear-gradient(#4881ff, #1958e3);
+	background: -webkit-linear-gradient(#3ACF87, #2CB572);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -50,10 +54,11 @@ h1 {
 h2 {
 	font-size: 20px;
 	font-weight: 500;
+	color: #2e2e2e;
 }
 
 h3 {
-	color: #4881ff;
+	color: #3ACF87;
 }
 
 #root, #__next {
@@ -93,7 +98,7 @@ h3 {
 }
 
 .btn-primary--next, input[type=submit] {
-	background: #4881ff;
+	background: #3ACF87;
 	border-radius: 20px;
 	color: #fff;
 	outline: 0;
