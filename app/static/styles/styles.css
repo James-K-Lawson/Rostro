@@ -286,7 +286,7 @@ strong {
 	}
 
 	.header-separator {
-		width: 230px;
+		min-width: 200px;
 	}
 }
 
