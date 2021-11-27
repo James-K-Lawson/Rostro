@@ -97,7 +97,7 @@ h3 {
 	margin-bottom: 40px;
 }
 
-.btn-primary--next, input[type=submit] {
+.btn-primary--next, .btn-primary--next-alt, input[type=submit] {
 	background: #3ACF87;
 	border-radius: 20px;
 	color: #fff;
@@ -116,9 +116,23 @@ h3 {
 	min-width: 350px;
 }
 
+.btn-primary--next-alt {
+	margin-top: 30px;
+	background: none;
+	border: 2px solid #3acf87;
+	color: #3acf87;
+	transition: border 0.3s ease, color 0.3s ease;
+}
+
 .btn-primary--next:hover, input[type=submit]:hover {
 	background: #26ad6c;
 	transition: background 0.3s ease;
+}
+
+.btn-primary--next-alt:hover {
+	border: 2px solid #2CB572;
+	color: #2cb572;
+	transition: border 0.3s ease, color 0.3s ease;;
 }
 
 .upload-info {
@@ -184,7 +198,7 @@ li {
 
 ::-webkit-file-upload-button {
 	display: none;
- }
+}
 
 @media only screen and (max-width: 1031px) {
 	h1 {
