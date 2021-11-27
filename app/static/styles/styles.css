@@ -284,6 +284,10 @@ strong {
 	.body-container--mobile {
 		display: flex;
 	}
+
+	.header-separator {
+		width: 290px
+	}
 }
 
 @media only screen and (max-width: 650px) {
