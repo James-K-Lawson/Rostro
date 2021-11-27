@@ -40,7 +40,6 @@
 </div>
 <script>
     function fileSelected() {
-        console.log('e')
         document.getElementById("file-select-text").innerHTML = document.getElementById("roster").value.replace(/^.*\\/, "") + "<br><br><strong style='cursor:pointer' class='upload-info'>Click here</strong> to select a new file"
     }
 
@@ -58,7 +57,7 @@
                 // If dropped items aren't files, reject them
                 if (ev.dataTransfer.items[i].kind === 'file') {
                     var file = ev.dataTransfer.items[i].getAsFile();
-                    document.getElementById("file-select-text").innerHTML = file.name
+                    document.getElementById("file-select-text").innerHTML = file.name + "<br><br><strong style='cursor:pointer' class='upload-info'>Click here</strong> to select a new file"
                     console.log('... file[' + i + '].name = ' + file.name);
                 }
             }
