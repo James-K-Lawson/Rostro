@@ -41,7 +41,7 @@
 <script>
     function fileSelected() {
         console.log('e')
-        document.getElementById("file-select-text").innerHTML = document.getElementById("roster").value.replace(/^.*\\/, "")
+        document.getElementById("file-select-text").innerHTML = document.getElementById("roster").value.replace(/^.*\\/, "") + "<br><br><strong style='cursor:pointer' class='upload-info'>Click here</strong> to select a new file"
     }
 
     function dropHandler(ev) {
