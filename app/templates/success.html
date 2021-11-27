@@ -3,11 +3,11 @@
 {% endblock %}
 {% block body %}
 <h1>Your Roster Was Successfully Converted!</h1>
-<div class = w3-content>
+<div>
 <p>Your username is: {{username}}</p>
 <p>We found {{shiftcount}} shifts</p>
 <a href="{{ url_for('download', filename = filename) }}"><button id='download_file'>Download your file</button></a>
-<button id = 'return_to_home'>Home</button>
+<button id='return_to_home'>Home</button>
 </div>
 <script>
     document.getElementById('return_to_home').addEventListener
