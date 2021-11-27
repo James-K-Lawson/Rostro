@@ -117,7 +117,7 @@ h3 {
 }
 
 .btn-primary--next:hover, input[type=submit]:hover {
-	background: #77a2ff;
+	background: #26ad6c;
 	transition: background 0.3s ease;
 }
 
