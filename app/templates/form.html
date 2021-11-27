@@ -29,7 +29,7 @@
         </p>
         <p style="margin-top: 15px; margin-bottom: 10px;">
             {{ form.rostertype.label }}<br>
-            {{ form.rostertype(size=32) }}
+            {{ form.rostertype }}
             {% for error in form.rostertype.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
@@ -79,6 +79,17 @@
 <style>
     label:nth-child(1) {
         font-weight: bold;
+    }
+
+    #rostertype {
+        width: 350px;
+        height: 30px;
+        border-radius: 3px;
+    }
+
+    #submit {
+        margin-top: 20px;
+        width: 350px;
     }
 </style>
 {% endblock %}
