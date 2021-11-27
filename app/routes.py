@@ -1,7 +1,6 @@
-from flask import render_template, flash, redirect, request, send_from_directory, send_file
+from flask import render_template, flash, redirect, request, send_from_directory, send_file, url_for, Response
 from werkzeug.utils import secure_filename
-import os
-import io
+import os, io
 from app.forms import RosterForm
 from app import app
 import RostroBackend.Rostro as Rostro
@@ -35,20 +34,31 @@ def form():
             filename = secure_filename(file.filename)
             save_path = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'])
             print('THIS SECTION HAS BEEN ACCESSED (VALIDATE ON SUBMIT)')
+            filename = 'temp' + '.' + filename.split('.')[1]
             file.save(os.path.join(save_path, filename))
-        return redirect('/success', code= 307)
+            # with open(content,'r') as f:
+            #     g=io.StringIO(f.read())
+            # temporarylocation=os.path.join(save_path,'temp.xlsx')
+            # with open(temporarylocation,'wb') as out:
+            #     out.write(g.read())            
+            return redirect('/success', code= 307)
     return render_template('form.html', title = 'Home', form = form)
 
 @app.route('/success', methods = ['get', 'post'])
 def success():
     form_data = request.form
+    temporarylocation="testout.xlsx"
     file_data = request.files['roster']
-    print(type(form_data.get('roster')))
     username = form_data.get('username')
     rostertype = form_data.get('rostertype')
+    file_data.filename = 'temp' + '.' + file_data.filename.split('.')[1]
     roster_path = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'],file_data.filename)
+    file_data.save(roster_path)
+    arr = os.listdir(os.path.join(app.root_path, app.config['UPLOAD_FOLDER']))
+    print(arr, '\t', '\t')
     ros = Rostro.sort_roster(username, rostertype, roster_path)
     calpath = ros.create_ical()
+    os.remove(roster_path)
     return render_template('success.html', username=username, filename = calpath, shiftcount = ros.shiftcount)
 
 @app.route('/success/<path:filename>', methods=['GET', 'POST'])
