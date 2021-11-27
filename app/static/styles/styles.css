@@ -121,12 +121,12 @@ h3 {
 	transition: background 0.3s ease;
 }
 
-a {
+.contact {
 	color: #2CB572;
 	transition: color 0.3s ease;
 }
 
-a:hover {
+.contact:hover {
 	color: #26ad6c;
 	transition: color 0.3s ease;
 }
