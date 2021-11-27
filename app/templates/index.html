@@ -3,22 +3,26 @@
 {% endblock %}
 {% block body %}
 {% block form %}
-<h1>Welcome to Rostro!</h1>
-<div class = w3-content>
-    <p class = 'text-align'><b>Tired of opening and reopening your excel roster to check when your next shift is? <br>Worry no more! Rostro has you covered.</b></p>
-        <p>Rostro is a service which easily converts your Excel roster into a .ics file. 
-        ICS is a universal calendar format used by essentially all of your home devices. It imports easily into iCalendar, Google Calendar, and Microsoft Outlook among others. 
-        Feel the ease of simply opening your phone and viewing your upcoming shifts on your phone's calendar widget! 
-        <br><br>Simply upload your roster, enter your name, and we'll process your .ics file in seconds.</p>
-<div class = vertical-center>
-<button id=to_form class = 'w3-button w3-black'>Create your Calendar!</button>
-</div></div>
-<script>
-    document.getElementById('to_form').addEventListener
-    ('click', runRostro);
-    function runRostro(){
-        window.location.href = '/form'
-    }
-</script>
+<div class="body-container--primary">
+    <div class="body-text--headers">
+        <h1 style="display: flex; flex-direction: row; align-items: center; justify-content: center; padding-right: 50px;"><img src="static/assets/favicon.svg" style="width: 56.58px; margin-right: 15px;">Rostro</h1>
+        <h2>ICS rostering made <strong style="color: #3ACF87">easy.</strong></h2>
+        <div style="width: calc(40vw + 100px); max-width: 800px; height: 2px; background: rgb(190, 190, 190); margin-top: 18px;"></div>
+    </div>
+    <div class="body-text--descriptives">
+        <h3>What is Rostro?</h3>
+        <p>Rostro takes your Excel roster file and converts it into an .ics file.</p>
+        <br>
+        <h3>What is an .ics file?</h3>
+        <p>An .ics file is a type of calendar file used by essentially all your devices. It's used by iCalendar, Google Calendar, Microsoft Outlook and many others calendar platforms.</p>
+        <br>
+        <h3>So what's the benefit?</h3>
+        <p>You can import an .ics file into your favourite calendar platform and easily be able to check your roster from all your devices whenever, and wherever you want.</p>
+        <br>
+        <h3>How do I use Rostro?</h3>
+        <p>Simply upload your roster, enter your name, and you'll receive an .ics file you can import into your favourite calendar platform in seconds. It's that easy.</p>
+    </div>
+    <a href="/form" class="btn-primary--next" id="to_form">CREATE MY CALENDAR</a>
+</div>
 {% endblock %}
 {% endblock %}

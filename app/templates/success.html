@@ -2,18 +2,26 @@
 {% block head %}
 {% endblock %}
 {% block body %}
-<h1>Your Roster Was Successfully Converted!</h1>
-<div class = w3-content>
-<p>Your username is: {{username}}</p>
-<p>We found {{shiftcount}} shifts</p>
-<a href="{{ url_for('download', filename = filename) }}"><button id='download_file'>Download your file</button></a>
-<button id = 'return_to_home'>Home</button>
+<div class="body-container--primary">
+    <div class="body-text--headers">
+        <h1
+            style="display: flex; flex-direction: row; align-items: center; justify-content: center; padding-right: 50px;">
+            <img src="static/assets/favicon.svg" style="width: 56.58px; margin-right: 15px;">Rostro
+        </h1>
+        <h2>Your roster was successfully converted!</h2>
+        <div
+            style="width: calc(40vw + 100px); max-width: 800px; height: 2px; background: rgb(190, 190, 190); margin-top: 18px;">
+        </div>
+    </div>
+    <span style="margin-top: 10px; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">Great news, <span style="text-transform: capitalize; display: inline; color: #3acf87; font-weight: bold; font-size: 18px;">{{username}}</span>!</span>
+    <span style="margin-top: 10px; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">We found and converted <span style="display: inline; color: #3acf87; font-weight: bold; font-size: 18px;">{{shiftcount}} shifts.</span></span>
+    <a href="{{ url_for('download', filename = filename) }}" style="margin-top:30px;" class="btn-primary--next" id="to_form">DOWNLOAD MY CALENDAR</a>
+    <a href="/form" class="btn-primary--next-alt" id="to_form">CREATE ANOTHER CALENDAR</a>
 </div>
-<script>
-    document.getElementById('return_to_home').addEventListener
-    ('click', go_home);
-    function go_home(){
-        window.location.href = '/index'
-    }
-</script>
+<div>
+
+
+</div>
+</div>
+
 {% endblock %}
