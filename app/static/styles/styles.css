@@ -295,13 +295,3 @@ strong {
 		min-height: 750px;
 	}
 }
-
-.watermark {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin: 15px;
-	font-size: 10px;
-	color: #c7c7c7;
-	text-decoration: none;
-}
