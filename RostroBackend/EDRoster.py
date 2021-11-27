@@ -210,4 +210,5 @@ class EDRoster(Roster):
 #             dates.append(date)
 
 if __name__ == '__main__':
-    ed = EDRoster('Term_5_2021_Intern.xlsx','LAWSON, James')
+    ed = EDRoster('LAWSON, James', 'C:\\Users\\James Lawson\\Documents\\Hacking\\RostroWeb\\app\\tmp\\Term 5 2021 House Officer.xlsx')
+    print(ed)
