@@ -120,6 +120,10 @@ h3 {
 	height: 20%;
 }
 
+.link {
+	text-decoration: none;
+}
+
 .body-text--descriptives {
 	height: 70%;
 }
