@@ -121,6 +121,16 @@ h3 {
 	transition: background 0.3s ease;
 }
 
+a {
+	color: #2CB572;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: #26ad6c;
+	transition: color 0.3s ease;
+}
+
 ::placeholder {
 	text-align: center;
 }
