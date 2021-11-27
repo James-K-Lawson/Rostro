@@ -121,6 +121,16 @@ h3 {
 	transition: background 0.3s ease;
 }
 
+.upload-info {
+	color: #2e2e2e;
+	transition: color 0.3s ease;
+}
+
+.upload-info:hover {
+	color: #0f0f0f;
+	transition: color 0.3s ease;
+}
+
 .contact {
 	color: #2CB572;
 	transition: color 0.3s ease;
@@ -172,6 +182,9 @@ li {
 	align-items: center;
 }
 
+::-webkit-file-upload-button {
+	display: none;
+ }
 
 @media only screen and (max-width: 1031px) {
 	h1 {
