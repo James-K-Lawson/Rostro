@@ -1,7 +1,10 @@
 # Project specific files to ignore
 *.xlsx
+*.xls
 *.ics
 config.py
+_EDRoster.py
+_MAPURoster.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -5,8 +5,10 @@ from openpyxl import workbook, worksheet
 from openpyxl.reader.excel import load_workbook
 
 from RostroBackend.Roster import *
-from RostroBackend.EDRoster import *
-from RostroBackend.MAPURoster import *
+# from Roster import *
+
+# from RostroBackend.EDRoster import *
+# from RostroBackend.MAPURoster import *
 
 import argparse
 
@@ -18,9 +20,9 @@ class ArgumentParser(argparse.ArgumentParser):
 
 def sort_roster(username: str, rostertype: str, rosterpath: str):
     if rostertype == 'ED':
-        ros = EDRoster(username, rosterpath)
+        ros = Roster(username, rosterpath)
     if rostertype == 'MAPU':
-        ros = MAPURoster(username, rosterpath)
+        ros = Roster(username, rosterpath)
     return ros
 
 if __name__ == "__main__":
