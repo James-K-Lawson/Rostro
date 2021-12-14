@@ -4,30 +4,23 @@
 {% block body %}
 <div class="body-container--primary">
     <div class="body-text--headers">
-        <a href="https://rostro.icu/" class="logo-separator link">
+        <a href="http://rostro.icu/" class="logo-separator link">
             <img id="logo" src="static/assets/favicon.svg" class="logo">
             <h1>Rostro</h1>
         </a>
-        <h2>ICS rostering made <strong>easy.</strong></h2>
+        <h2>Shift to your <strong>own</strong> calendar.</h2>
         <div class="header-separator"></div>
     </div>
     <div class="body-text--descriptives">
         <form id=Rostro action='' method='post' novalidate enctype="multipart/form-data">
             {{form.hidden_tag()}}
             <input name="roster" required size="32" type="file" id="roster" onchange='fileSelected()' style="display:none" />
-            <label for="roster" style="margin-bottom: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px; width: 100%; background:#d2e3f0; border: 2px dashed rgb(22, 97, 167); border-radius: 20px;" id="roster-select" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+            <label for="roster" style="margin-bottom: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 240px; width: 100%; background:#d2e3f0; border: 2px dashed rgb(22, 97, 167); border-radius: 20px;" id="roster-select" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
                 <p style="font-size: 16px;" id="file-select-text"><strong style="cursor:pointer;" class="upload-info">Choose an excel file</strong> or drag it here</p>
             </label>
             <p>
                 {{form.username}}
                 {% for error in form.username.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p style="margin-top: 15px; margin-bottom: 10px;">
-                {{ form.rostertype.label }}<br>
-                {{ form.rostertype }}
-                {% for error in form.rostertype.errors %}
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>

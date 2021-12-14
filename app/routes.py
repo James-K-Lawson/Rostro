@@ -57,13 +57,12 @@ def success():
     temporarylocation="testout.xlsx"
     file_data = request.files['roster']
     username = form_data.get('username')
-    rostertype = form_data.get('rostertype')
     file_data.filename = 'temp' + '.' + file_data.filename.split('.')[1]
     roster_path = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'],file_data.filename)
     file_data.save(roster_path)
     arr = os.listdir(os.path.join(app.root_path, app.config['UPLOAD_FOLDER']))
     print(arr, '\t', '\t')
-    ros = Rostro.sort_roster(username, rostertype, roster_path)
+    ros = Rostro.sort_roster(username, roster_path)
     calpath = ros.create_ical()
     os.remove(roster_path)
     return render_template('success.html', username=username, filename = calpath, shiftcount = ros.shiftcount)
