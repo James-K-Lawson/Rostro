@@ -66,6 +66,12 @@ h3 {
 	isolation: isolate;
 }
 
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 .body-container--primary {
 	display: flex;
 	flex-direction: column;
@@ -326,7 +332,7 @@ strong {
 	h3 {
 		font-size: 16px;
 	}
-	
+
 	p, span, .success-span {
 		font-size: 12.5px;
 	}
