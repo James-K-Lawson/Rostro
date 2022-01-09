@@ -24,6 +24,12 @@ body {
 	flex-direction: column;
 }
 
+@media only screen and (max-width: 499px) {
+	body {
+		padding: clamp(20px, 5%, 100px);
+	}
+}
+
 img, picture, video, canvas, svg {
 	display: block;
 	max-width: 100%;
