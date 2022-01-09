@@ -126,7 +126,7 @@ input {
 .body-text--headers, .body-text--descriptives, .body-buttons--primary, .logo-separator {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
 }
 
@@ -368,6 +368,10 @@ strong {
 	}
 } */
 
-.btn-success, input {
+.btn-success, input, label {
 	min-width: 237.6px;
+}
+
+label {
+	padding: 10px;
 }
