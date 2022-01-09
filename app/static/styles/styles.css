@@ -20,6 +20,7 @@ body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	padding: clamp(20px, 5%, 100px);
+	flex-direction: column;
 }
 
 img, picture, video, canvas, svg {
