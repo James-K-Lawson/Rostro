@@ -2,24 +2,20 @@
 <html lang="en">
 
 <head>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MP659D4');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-control" content="public">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213770062-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-213770062-1');
-    </script>
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "9i2p5cw81f");
-    </script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.svg') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
     <link rel="preload" as="image" href="static/assets/favicon.svg">
@@ -28,6 +24,7 @@
 </head>
 
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP659D4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% block body %}
     {% block form %}
     {% endblock %}
