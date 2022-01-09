@@ -139,6 +139,7 @@ input {
 .body-text--headers {
 	justify-content: flex-start;
 	justify-self: flex-start;
+	align-items: center;
 }
 
 .link {
