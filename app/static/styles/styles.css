@@ -338,8 +338,12 @@ strong {
 		font-size: 12.5px;
 	}
 
-	.btn-primary--next, .drop-file, #Rostro, input[type=text] {
-		min-width: 100%;
+	/* .btn-primary--next, .drop-file, #Rostro, input[type=text] {
+		width: 100%;
+	} */
+
+	.btn-primary--next, .btn-primary--next-alt {
+		min-width: 237.6px;
 	}
 
 	#Rostro, input[type=text] {
@@ -358,5 +362,5 @@ strong {
 } */
 
 .btn-success {
-	min-width: 0;
+	min-width: 237.6px;
 }
