@@ -361,6 +361,6 @@ strong {
 	}
 } */
 
-.btn-success {
+.btn-success, input {
 	min-width: 237.6px;
 }
