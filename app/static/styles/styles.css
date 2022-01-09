@@ -206,7 +206,6 @@ input {
 .contact {
 	text-decoration: none;
 	font-family: 'Noto Sans';
-	position: absolute;
 	color: #2CB572;
 	transition: color 0.3s ease;
 }
