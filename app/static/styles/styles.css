@@ -10,6 +10,7 @@
 
 html, body {
 	min-height: 100vh;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,7 +20,7 @@ html, body {
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	padding: clamp(20px, 5%, 100px);
+	padding: clamp(20px, 5%, 25px);
 	flex-direction: column;
 }
 
