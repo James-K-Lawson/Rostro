@@ -369,6 +369,13 @@ strong {
 	}
 }
 
+@media only screen and (min-width: 1080px) {
+	.success-success {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
 /* @media only screen and (max-width: 650px) {
 	.body-container--primary {
 		min-height: 750px;
