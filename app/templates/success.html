@@ -11,21 +11,16 @@
         <h2>Shift to your <strong>own</strong> calendar.</h2>
         <div class="header-separator"></div>
     </div>
-    <div class="body-text--descriptives">
-        <span style="margin-top: 10px; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">Great news, <span style="text-transform: capitalize; display: inline; color: #3acf87; font-weight: bold; font-size: 18px;">{{username}}</span>!</span>
-        <span style="margin-top: 10px; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">We found and converted <span style="display: inline; color: #3acf87; font-weight: bold; font-size: 18px;">{{shiftcount}} shifts</span>.</span>
-        <span style="margin-top: 10px; text-align: center; font-family: 'Noto Sans'; color: #2e2e2e; font-size: 18px;">Now, just open it with the calendar app of your choice.</span>
+    <div class="body-text--descriptives success-success">
+        <span class="success-span">Great news, <span style="text-transform: capitalize; display: inline; color: #3acf87; font-weight: bold;">{{username}}</span>!</span>
+        <span class="success-span">We found and converted <span style="display: inline; color: #3acf87; font-weight: bold;">{{shiftcount}} shifts</span>.</span>
+        <span class="success-span">Now, just open it with the calendar app of your choice.</span>
     </div>
-    <div class="body-buttons--primary" style="margin-bottom: 11.5%;">
-        <a href="{{ url_for('download', filename = filename) }}" class="btn-primary--next" id="to_form">DOWNLOAD MY CALENDAR</a>
+    <div class="body-buttons--primary">
+        <a href="{{ url_for('download', filename = filename) }}" class="btn-primary--next btn-success" id="to_form">DOWNLOAD MY CALENDAR</a>
         <div style="margin: 5% 0"></div>
-        <a href="/form" class="btn-primary--next-alt" id="to_form">CREATE ANOTHER CALENDAR</a>
+        <a href="/form" class="btn-primary--next-alt btn-success" id="to_form">CREATE ANOTHER CALENDAR</a>
     </div>
-</div>
-<div>
-
-
-</div>
 </div>
 
 {% endblock %}

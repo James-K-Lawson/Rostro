@@ -15,7 +15,7 @@
         <form id=Rostro action='' method='post' novalidate enctype="multipart/form-data">
             {{form.hidden_tag()}}
             <input name="roster" required size="32" type="file" id="roster" onchange='fileSelected()' style="display:none" />
-            <label for="roster" style="margin-bottom: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 240px; width: 100%; background:#d2e3f0; border: 2px dashed rgb(22, 97, 167); border-radius: 20px;" id="roster-select" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+            <label for="roster" class="drop-file" id="roster-select" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
                 <p style="font-size: 16px;" id="file-select-text"><strong style="cursor:pointer;" class="upload-info">Choose an excel file</strong> or drag it here</p>
             </label>
             <p>
