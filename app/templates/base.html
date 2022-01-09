@@ -19,6 +19,9 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.svg') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
     <link rel="preload" as="image" href="static/assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     {% block head %}{% endblock %}
     <title>Shift To Your Own Calendar | Rostro</title>
 </head>
@@ -36,8 +39,8 @@
             </a>
         </div>
         <div style="width: 50%; position: relative; display: flex; flex-direction: column;">
-            <a id="watermark-gus" style="position: relative; font-size: 10px; color: #dadada; text-decoration: none; align-self: flex-end;" target="_blank" href="https://ggaidelevicius.com">designed by gus</a>
-            <a id="watermark-james" style="position: relative; font-size: 10px; color: #dadada; text-decoration: none;  align-self: flex-end;" target="_blank" href="https://rostro.icu">Rostro by James Lawson</a>
+            <a id="watermark-gus" style="position: relative; font-size: 10px; color: #dadada; text-decoration: none; align-self: flex-end;" target="_blank" href="https://ggaidelevicius.com" rel="noopener">designed by gus</a>
+            <a id="watermark-james" style="position: relative; font-size: 10px; color: #dadada; text-decoration: none;  align-self: flex-end;" target="_blank" href="https://rostro.icu" rel="noopener">Rostro by James Lawson</a>
         </div>
     </div>
 </body>
